@@ -2,5 +2,5 @@ OEM IOT API
 ===========
 
 .. image:: images/image1.png
-  :width: 400
+  :width: 200
   :alt: Alternative text
