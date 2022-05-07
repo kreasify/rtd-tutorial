@@ -29,8 +29,8 @@ HTTP is a request/response protocol, this means that every request that you make
 An HTTP request also needs the following parameters:
 
 * ``Host``: Specifies the server you will be making HTTP requests to, e.g. https://rapid-iot.dev
-* ``Path``: This is typically the remaining portion of the URL that specifies the resource you want to consume, e.g. if an API endpoint is: rapid-iot.dev/api/v1.6/devices/my-device the path is /api/v1.6/devices/my-device
-* ``Headers``: Define the operating parameters of the HTTP request such as X-Auth-Token, Content-Type, Content-Length, etc.
+* ``Path``: This is typically the remaining portion of the URL that specifies the resource you want to consume, e.g. if an API endpoint is: ``rapid-iot.dev/api/v1.6/devices/my-device`` the path is ``/api/v1.6/devices/my-device``
+* ``Headers``: Define the operating parameters of the HTTP request such as ``X-Auth-Token``, ``Content-Type``, ``Content-Length``, etc.
 * ``Body/payload``: In the case of POST and PATCH requests, the body is the data sent to the server, usually as a stringified JSON. By convention GET requests should not have a body because they are meant to request data, not sending them.
 
 TenX accepts data as JavaScript Object Notation or JSON. JSON is a typical HTTP data type, it is a collection of name/value pairs. In various programming languages, this is treated as an object, record, struct, dictionary, hash table, keyed list, or associative array. It is also human readable and language independent. An example of a JSON that TenX accepts can be seen below:
