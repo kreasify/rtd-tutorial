@@ -22,3 +22,4 @@ Contents
    api
    oem
    welcome
+   authentication
