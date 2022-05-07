@@ -12,7 +12,9 @@ How to send a token in a request:
 Sending the token in the Header (recommended):  
 ``X-Auth-Token=token``
 
->>> Note: Do not send tokens as a query parameter as the token is visible (to logs, browser history and packet sniffers)
+.. note::
+
+    Note: Do not send tokens as a query parameter as the token is visible (to logs, browser history and packet sniffers)
 
 //Example Request to create a device with Token in the Header
 
