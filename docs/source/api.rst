@@ -64,7 +64,7 @@ Usage:
 
 .. code-block:: console
 
-   https:/oem-iot.com/api/v1.6/devices/&lt;device\_label&gt;/device\_status
+   https:/oem-iot.com/api/v1.6/devices/<device_label>/device_status
 
 Where ``<device_label>`` is  the label of the Device
 
@@ -92,8 +92,7 @@ Get last seen status of a device:
 
 .. code-block:: console
 
-   $ curl -X GET 'https://industrial.api.ubidots.com/api/v1.6/devices/device_status’ \
-
+   $ curl -X GET 'https://industrial.api.ubidots.com/api/v1.6/devices/device_status’ \
    -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73'
 
 Expected response:
@@ -105,13 +104,13 @@ Expected response:
      "device_id": "A1234",
      "battery": 80,
      "timestamp" : 1635264014782
-     "Config": \[
+     "Config": [
        {
          "frequency": 34,
          "param1": 0,
          "param2": 22
        }
-     \]
+     ]
    }
 
 Configure a single device
@@ -127,7 +126,7 @@ Configure a single device
    * - HTTP METHOD
      - URL
    * - POST
-     - https://oem-iot.com/api/v1.6/devices/&lt;device_label&gt;/
+     - https://oem-iot.com/api/v1.6/devices/<device_label>/
 
 Where ``<device_label>`` is a string with the label of the Device to which data will be sent to.
 
@@ -168,9 +167,9 @@ Expected response:
 
 .. code-block:: json
 
-    {
-     "Frequency":\[{"status_code":201}\]
-     "param1":\[{"status_code":201}\]
+   {
+   "Frequency":[{"status_code":201}]
+   "param1":[{"status_code":201}]
    }
 
 Event Notifier API
@@ -186,7 +185,7 @@ Event Notifier API
    * - HTTP METHOD
      - URL
    * - POST
-     - https://oem-iot.com/api/v1.6/devices/&lt;device_label&gt;/
+     - https://oem-iot.com/api/v1.6/devices/<device_label>/
 
 Where ``<device_label>`` is a string with the label of the Device to which data will be sent to.
 
@@ -229,8 +228,6 @@ The ``"X-Auth-Token"`` header is required for your request:
 
 .. note::
 
-   Note:
-
    OEM needs to provide a callback API which will get invoked when above events of interest occur on a device.
 
 Example1
@@ -240,10 +237,10 @@ Get notified when a configuration has taken effect
 
 .. code-block:: console
 
-   $ curl -X POST 'https://oem-iot.com/api/v1.6/devices/&lt;device_label&gt;/' \
-    -H 'Content-Type: application/json' \
-    -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
-   -d '{"config\_event\_id":  \["https://&lt;your-url&gt;/&lt;your-notification-api&gt;"\], “config\_event\_param”:0}'
+   $ curl -X POST 'https://oem-iot.com/api/v1.6/devices/<device_label>/' \
+   -H 'Content-Type: application/json' \
+   -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
+   -d '{"config_event_id":  ["https://<your-url>/<your-notification-api>"], “config_event_param”:0}'
 
 Expected response:
 
@@ -258,10 +255,10 @@ Get notified when sensor level crosses a threshold. In this case 450 is the thre
 
 .. code-block:: console
 
-   $ curl -X POST 'https://oem-iot.com/api/v1.6/devices/&lt;device_label&gt;/' \
-    -H 'Content-Type: application/json' \
-    -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
-   -d '{"sensor\_event\_id":  \["https://&lt;your-url&gt;/&lt;your-notification-api&gt;"\], “sensor\_event\_param”:450}'
+   $ curl -X POST 'https://oem-iot.com/api/v1.6/devices/<device_label>/' \
+   -H 'Content-Type: application/json' \
+   -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
+   -d '{"sensor_event_id":  ["https://<your-url>/<your-notification-api>"], “sensor_event_param”:450}'
 
 Expected response:
 
@@ -282,7 +279,7 @@ Event ALERT API
    * - HTTP METHOD
      - URL
    * - POST
-     - https://oem-iot.com/api/v1.6/devices/&lt;device_label&gt;/
+     - https://oem-iot.com/api/v1.6/devices/<device_label>/
 
 Where ``<device_label>`` is a string with the label of the Device to which data will be sent to.
 
@@ -335,10 +332,10 @@ Get an SMS / text message when sensor reading crosses given threshold
 
 .. code-block:: console
 
-   $ curl -X POST 'https://oem-iot.com/api/v1.6/devices/&lt;device_label&gt;/' \
-    -H 'Content-Type: application/json' \
-    -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
-   -d '{"sensor\_alert\_id":  \["+1-800-654-xxyy"\], “sensor\_alert\_method”:”sms”}'
+   $ curl -X POST 'https://oem-iot.com/api/v1.6/devices/<device_label>/' \
+   -H 'Content-Type: application/json' \
+   -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
+   -d '{"sensor_alert_id":  ["+1-800-654-xxyy"], “sensor_alert_method”:”sms”}'
 
 Expected response:
 
@@ -353,10 +350,10 @@ Get an email when battery reading crosses given threshold
 
 .. code-block:: console
 
-   $ curl -X POST 'https://oem-iot.com/api/v1.6/devices/&lt;device_label&gt;/' \
-    -H 'Content-Type: application/json' \
-    -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
-   -d '{"battery\_event\_id":  \["customer_name@gmail.com"\], “battery\_alert\_method”:”email”}'
+   $ curl -X POST 'https://oem-iot.com/api/v1.6/devices/<device_label>/' \
+   -H 'Content-Type: application/json' \
+   -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
+   -d '{"battery_event_id":  ["customer_name@gmail.com"], “battery_alert_method”:”email”}'
 
 Expected response:
 
@@ -377,7 +374,7 @@ FOTA API
    * - HTTP METHOD
      - URL
    * - POST
-     - https://oem-iot.com/api/v1.6/devices/&lt;device_label&gt;/
+     - https://oem-iot.com/api/v1.6/devices/<device_label>/
 
 Where ``<device_label>`` is a string with the label of the Device to which data will be sent to.
 
@@ -412,10 +409,10 @@ Get an SMS / text message when sensor reading crosses given threshold
 
 .. code-block:: console
 
-   $ curl -X POST 'https://oem-iot.com/api/v1.6/devices/&lt;device_label&gt;/' \
-    -H 'Content-Type: application/json' \
-    -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
-   -d '{"fota_request":  \[“http://s3.amazonaws.com/\[bucket_name\]/filename"\]}'
+   $ curl -X POST 'https://oem-iot.com/api/v1.6/devices/<device_label>/' \
+   -H 'Content-Type: application/json' \
+   -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
+   -d '{"fota_request":  [“http://s3.amazonaws.com/[bucket_name]/filename"]}'
 
 Expected response:
 

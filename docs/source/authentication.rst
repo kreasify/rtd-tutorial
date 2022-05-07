@@ -14,17 +14,13 @@ Sending the token in the Header (recommended):
 
 .. note::
 
-    Note: Do not send tokens as a query parameter as the token is visible (to logs, browser history and packet sniffers)
+    Do not send tokens as a query parameter as the token is visible (to logs, browser history and packet sniffers)
 
 //Example Request to create a device with Token in the Header
 
 .. code-block:: console
 
-    curl -X POST 'https://tenx.live/api/v1.0/devices/' \
-
-    -H 'Content-Type: application/json' \
-
-    -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
-
+    curl -X POST 'https://tenx.live/api/v1.0/devices/' \
+    -H 'Content-Type: application/json' \
+    -H 'X-Auth-Token: oaXBo6ODhIjPsusNRPUGIK4d72bc73' \
     -d '{}'
-

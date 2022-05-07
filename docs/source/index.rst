@@ -10,6 +10,7 @@ Contents
 
 .. toctree::
 
+   oem
    welcome
    authentication
    overview

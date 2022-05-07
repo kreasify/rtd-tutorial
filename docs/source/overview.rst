@@ -58,14 +58,14 @@ Text
 
 Where:
 
-* ``{PATH}``: Path to the resource to consume  
+* ``{PATH}``: Path to the resource to consume
     Example: ``/api/v1.6/variables/`` to get user's variables information.
-* ``{HOST}``: Host URL.  
+* ``{HOST}``: Host URL.
     Example: rapid-iot.dev
-* ``{USER_AGENT}``: An optional string used to identify the type of client, be it by application type, operating system, software vendor or software version of the requesting user agent.  
+* ``{USER_AGENT}``: An optional string used to identify the type of client, be it by application type, operating system, software vendor or software version of the requesting user agent.
     Examples: ``OEM\_CLOUD, CUST\_DEVICE``
 * ``{TOKEN}``: Unique key that authorizes your device to ingest data inside your TenX account.
-* ``{PAYLOAD_LENGTH}``: The number of characters of your payload.  
+* ``{PAYLOAD_LENGTH}``: The number of characters of your payload.
     Example: The payload ``{"Frequency": 20}`` will have a content-length of 19.
-* ``{PAYLOAD}``: Data to send.  
+* ``{PAYLOAD}``: Data to send.
     Example: ``{"Frequency": 20}``
