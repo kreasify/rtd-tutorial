@@ -18,35 +18,35 @@ The following methods are specified within the HTTP standard:
 | GET | Used to retrieve information |
 | POST | Used to send information |
 
-<table class="c9">
-    <thead>
-        <tr>
-            <th>
-                <p>HTTP METHOD</p>
-            </th>
-            <th>
-                <p>DESCRIPTION</p>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <p>GET</p>
-            </td>
-            <td>
-                <p>Used to retrieve information</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>POST</p>
-            </td>
-            <td>
-                <p>Used to send information</p>
-            </td>
-        </tr>
-    </tbody>
+<table>
+<thead>
+<tr>
+<th>
+<p>HTTP METHOD</p>
+</th>
+<th>
+<p>DESCRIPTION</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p>GET</p>
+</td>
+<td>
+<p>Used to retrieve information</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>POST</p>
+</td>
+<td>
+<p>Used to send information</p>
+</td>
+</tr>
+</tbody>
 </table>
 
 HTTP is a request/response protocol, this means that every request that you make is answered by the server. This response includes a number (response code) and a body. For example, when you make a request to retrieve a file on a website "(e.g. "Get me the file 'webside.html'" )", you are effectively sending a GET request. If the request is correct, the server will typically return a 200 response code, along with requested body, in this case the file.
