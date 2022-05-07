@@ -168,7 +168,8 @@ Expected response:
      "param1":\[{"status_code":201}\]
    }
 
-### Event Notifier API
+Event Notifier API
+******************
 
 **This API allows the 10X Cloud to inform the customer app of events of interest.**
 
