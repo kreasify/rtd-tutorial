@@ -1,7 +1,9 @@
 OEM IOT API
 ===========
 
-![](images/image1.png)
+.. image:: images/image1.png
+  :width: 400
+  :alt: Alternative text
 
 Contents
 --------

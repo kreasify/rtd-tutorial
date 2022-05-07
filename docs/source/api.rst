@@ -36,7 +36,8 @@ Root certificates are shared separately and are available in multiple formats.
 * ``DER``:: Same as the PEM file, with an alternative encoding.
 * ``CRT``:  Same as the PEM file, with a different extension. Often referred to as .crt, .cert or .cer.
 
-### API OVERVIEW
+API OVERVIEW
+************
 
 .. list-table::
    :header-rows: 1
@@ -54,7 +55,8 @@ Root certificates are shared separately and are available in multiple formats.
    * - FOTA API
      - Allows OEM to update firmware of devices
 
-### Get Device Status
+Get Device Status
+*****************
 
 **This API fetches the last seen status of the 10X device or IoT Module.**
 
@@ -66,7 +68,8 @@ Usage:
 
 Where ``<device_label>`` is  the label of the Device
 
-### Headers
+Headers
+*******
 
 The ``"X-Auth-Token"`` header is required for your request:
 
@@ -111,7 +114,8 @@ Expected response:
      \]
    }
 
-### Configure a single device
+Configure a single device
+*************************
 
 **This API sends configuration data to a single device**
 
@@ -127,7 +131,8 @@ Expected response:
 
 Where ``<device_label>`` is a string with the label of the Device to which data will be sent to.
 
-### Headers
+Headers
+*******
 
 The ``"X-Auth-Token"`` header is required for your request:
 
@@ -185,7 +190,8 @@ Event Notifier API
 
 Where ``<device_label>`` is a string with the label of the Device to which data will be sent to.
 
-### Headers
+Headers
+*******
 
 The ``"X-Auth-Token"`` header is required for your request:
 
@@ -263,7 +269,8 @@ Expected response:
 
    200 OK
 
-### Event ALERT API
+Event ALERT API
+***************
 
 **This API allows the 10X Cloud to inform the customer of events of interest. While the Notifier invokes callbacks, the alert API will send emails, SMS etc**
 
@@ -279,7 +286,8 @@ Expected response:
 
 Where ``<device_label>`` is a string with the label of the Device to which data will be sent to.
 
-### Headers
+Headers
+*******
 
 The ``"X-Auth-Token"`` header is required for your request:
 
@@ -299,7 +307,8 @@ The ``"X-Auth-Token"`` header is required for your request:
      - Yes
      - Type of data in body
 
-### Events of interest
+Events of interest
+******************
 
 .. list-table::
    :header-rows: 1
@@ -355,7 +364,8 @@ Expected response:
 
    200 OK
 
-### FOTA API
+FOTA API
+********
 
 **This API allows the 10X Cloud to perform an over the air firmware update (FOTA)**
 
@@ -371,7 +381,8 @@ Expected response:
 
 Where ``<device_label>`` is a string with the label of the Device to which data will be sent to.
 
-### Headers
+Headers
+*******
 
 The ``"X-Auth-Token"`` header is required for your request:
 
